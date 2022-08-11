@@ -1,0 +1,107 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Washington State Department of Social and Health Services</span>
+  
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+      
+    <mat-icon> phone</mat-icon>
+    <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span> 
+    <mat-icon>g_translate</mat-icon>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <section>
+      <div class="example-button-row">
+        <button mat-raised-button>LOGIN</button>
+      </div>
+    </section>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="card-wrapper">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Could I Qualify?  >    Member Summary</mat-card-title>
+    </mat-card-header>
+    <div class="card-container"></div>
+    <mat-divider></mat-divider>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+    <div *ngIf="!showDiv.hasData">
+      <mat-card-subtitle>
+        <p>         No members have been added to your household yet. Start adding members by clicking on "ADD MEMBER".       </p>
+      </mat-card-subtitle>
+    </div>
+    <div *ngIf="showDiv.hasData">
+      <!-- <ul>
+        <li *ngFor="let memb of members">
+          {{ memb.fname }}
+          </li>
+      </ul> -->
+      <mat-card-subtitle>
+        <h2>Members</h2>
+      </mat-card-subtitle>
+      <table class="member_table" >
+        <tr>
+          <th>NAME</th>
+          <th style="float: right;">EDIT</th>
+          <th>DELETE</th>
+        </tr>
+        <tr class="member_table" aria-colspan="2" *ngFor="let memb of members">
+          <td>{{ memb.fname }}</td>
+          <td>
+            <button md-raised-button class="md-raised md-primary" style="float: right;" (click)="editMember()"><mat-icon>edit</mat-icon></button>
+          </td>
+          <td>
+            <button md-raised-button class="md-raised md-primary" (click)="deleteMember()"><mat-icon>delete</mat-icon></button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="card card-small">
+      <button mat-raised-button color="Basic" (click)="addMember();">ADD MEMBER</button>
+    </div>
+    
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+    <mat-card-content>
+      <button mat-button class="text-align: left" (click) ="exit()">EXIT PRE-SCREENER</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="primary" (click)="back();">BACK</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="accent" (click)="onClick();">NEXT</button>
+  </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="overlay" *ngIf="popup">
+	<div class="popup">
+		<h2>Missing Information</h2>
+		<a class="close" (click)="Close()">&times;</a>
+		<div class="content">
+		Please enter at least one member in your household.
+		</div>
+	</div>
+</div>
+  
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span>Need Assistance?&nbsp;</span>
+    <mat-icon> phone</mat-icon>
+    <span class='material-icons-outlined'>   &nbsp;  Call us @ +1(984)116-6699</span> 
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <button md-raised-button class="md-raised md-primary" (click)="onEdit()"><mat-icon> publish</mat-icon>Back To Top</button>
+  </mat-toolbar-row>
+</mat-toolbar>

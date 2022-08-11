@@ -1,0 +1,115 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Washington State Department of Social and Health Services</span>
+  
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+      
+    <mat-icon> phone</mat-icon>
+    <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span> 
+    <mat-icon>g_translate</mat-icon>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <section>
+      <div class="example-button-row">
+        <button mat-raised-button>LOGIN</button>
+      </div>
+    </section>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="card-wrapper">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Could I Qualify?  &nbsp;&nbsp;  >  &nbsp;&nbsp;    Additional Information</mat-card-title>
+    </mat-card-header>
+    <div class="card-container"></div>
+    <mat-divider></mat-divider>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Are you a parent of a child under 18?</span>
+        </mat-card-subtitle>
+        <mat-radio-group [(ngModel)]="parent" (change)="onRadioChange()">
+          <mat-radio-button value="y">Yes</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="n">No</mat-radio-button>
+        </mat-radio-group>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Is this person pregnant or been pregnant in the last 6 months?</span>
+        </mat-card-subtitle>
+        <mat-radio-group [(ngModel)]="pregnant" (change)="onRadioChange()">
+          <mat-radio-button value="y">Yes</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="n">No</mat-radio-button>
+        </mat-radio-group>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Does this person have a job (including self-employment)?</span>
+        </mat-card-subtitle>
+        <mat-radio-group [(ngModel)]="job" (change)="onRadioChange()">
+          <mat-radio-button value="y">Yes</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="n">No</mat-radio-button>
+        </mat-radio-group>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Does this person have any other kind of monthly income?</span>
+        </mat-card-subtitle>
+        <mat-radio-group [(ngModel)]="income" (change)="onRadioChange()">
+          <mat-radio-button value="y">Yes</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="n">No</mat-radio-button>
+        </mat-radio-group>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+    <mat-card-content>
+      <button mat-button class="text-align: left" (click) ="exit()">EXIT PRE-SCREENER</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="primary" (click)="back();">BACK</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="accent" (click)="save();">SAVE</button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+  
+<div class="card-container"></div>
+<div class="card-container"></div>
+<div class="card-container"></div>
+<div class="card-container"></div>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+  
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+    <span>Need Assistance?&nbsp;</span>
+    <mat-icon> phone</mat-icon>
+    <span class='material-icons-outlined'>   &nbsp;  Call us @ +1(984)116-6699</span> 
+    <span class="example-spacer"></span>
+    
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+    
+    <button md-raised-button class="md-raised md-primary" (click)="onEdit()"><mat-icon> publish</mat-icon>Back To Top</button>
+
+  </mat-toolbar-row>
+</mat-toolbar>

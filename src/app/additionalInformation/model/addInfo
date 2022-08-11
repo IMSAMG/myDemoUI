@@ -1,0 +1,11 @@
+import {Response} from '../../core/response';
+
+export class AddInfo extends Response {
+  constructor(public parent?: string,
+              public pregnant?: string,
+              public job?: number,
+              public income?: string,
+            ) {
+                super();
+            }
+}

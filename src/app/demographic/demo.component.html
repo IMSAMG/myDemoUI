@@ -1,0 +1,158 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Washington State Department of Social and Health Services</span>
+  
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+      
+    <mat-icon> phone</mat-icon>
+    <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span> 
+    <mat-icon>g_translate</mat-icon>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <section>
+      <div class="example-button-row">
+        <button mat-raised-button>LOGIN</button>
+      </div>
+    </section>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="card-wrapper">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Could I Qualify?  &nbsp;&nbsp;  >  &nbsp;&nbsp;    Member Information</mat-card-title>
+    </mat-card-header>
+    <div class="card-container"></div>
+    <mat-divider></mat-divider>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+      <mat-card-subtitle>
+        <span>First Name *</span>
+      </mat-card-subtitle>
+      <mat-form-field appearance="standard">
+        <input matInput placeholder="" [(ngModel)]="fname"/>
+      </mat-form-field>
+    <div class="card-container"></div>
+      <mat-card-subtitle>
+        <span>Last Name *</span>
+      </mat-card-subtitle>
+      <mat-form-field appearance="standard">
+        <input matInput placeholder="" [(ngModel)]="lname"/>
+      </mat-form-field>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Age *</span>
+        </mat-card-subtitle>
+        <mat-form-field appearance="standard">
+          <input matInput placeholder="" [(ngModel)]="age"/>
+        </mat-form-field>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Units</span>
+        </mat-card-subtitle>
+        <mat-form-field>
+          <mat-label>Units</mat-label>
+          <mat-select [(ngModel)]="selectedUnit">
+            <mat-option *ngFor="let unit of unit" [value]="unit.value">
+              {{ unit.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Gender</span>
+        </mat-card-subtitle>
+        <mat-radio-group [(ngModel)]="gender" (change)="onRadioChange()">
+          <mat-radio-button value="m">Male</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="f">Female</mat-radio-button>
+        </mat-radio-group> 
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Are you a resident of Washington?</span>
+        </mat-card-subtitle>
+        <mat-radio-group [(ngModel)]="resident" (change)="onRadioChange()">
+          <mat-radio-button value="y">Yes</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="n">No</mat-radio-button>
+        </mat-radio-group>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Is this person a U.S. citizen or a lawful permanent resident?</span>
+        </mat-card-subtitle>
+        <mat-radio-group [(ngModel)]="citizen" (change)="onRadioChange()">
+          <mat-radio-button value="y">Yes</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="n">No</mat-radio-button>
+        </mat-radio-group>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Is this person currently participating in Medicaid, SNAP, and/or TANF?</span>
+        </mat-card-subtitle>
+        <mat-radio-group [(ngModel)]="participant" (change)="onRadioChange()">
+          <mat-radio-button value="y">Yes</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="n">No</mat-radio-button>
+        </mat-radio-group>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+        <mat-card-subtitle>
+          <span>Is this person permanently diabled or blind?</span>
+        </mat-card-subtitle>
+        <mat-radio-group [(ngModel)]="blindDisabled" (change)="onRadioChange()">
+          <mat-radio-button value="y">Yes</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <mat-radio-button value="n">No</mat-radio-button>
+        </mat-radio-group>
+    <div class="card-container"></div>
+    <div class="card-container"></div>
+    <mat-card-content>
+      <button mat-button class="text-align: left" (click) ="exit()">EXIT PRE-SCREENER</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="primary" (click)="back();">BACK</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="accent" (click)="start();">START</button>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+  
+<div class="card-container"></div>
+<div class="card-container"></div>
+<div class="card-container"></div>
+<div class="card-container"></div>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+  
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+    <span>Need Assistance?&nbsp;</span>
+    <mat-icon> phone</mat-icon>
+    <span class='material-icons-outlined'>   &nbsp;  Call us @ +1(984)116-6699</span> 
+    <span class="example-spacer"></span>
+    
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+    
+    <button md-raised-button class="md-raised md-primary" (click)="onEdit()"><mat-icon> publish</mat-icon>Back To Top</button>
+
+  </mat-toolbar-row>
+</mat-toolbar>

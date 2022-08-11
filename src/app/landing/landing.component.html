@@ -1,0 +1,160 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button class="buttonColor" (click)="back();"><span>Washington State Department of Social and Health Services</span></button>
+  
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+      
+    <mat-icon> phone</mat-icon>
+    <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span> 
+    <mat-icon>g_translate</mat-icon>
+    <span>&nbsp;&nbsp;&nbsp;</span>
+    <section>
+      <div class="example-button-row">
+        <button mat-raised-button (click)="login();">LOGIN</button>
+      </div>
+    </section>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<div class="content" role="main">
+  <h2>Get Access to Washington Integrated Eligibility System</h2>
+  <div class="card-container">
+    <div class="card card-small">
+      <span class="md-button" type="button" (click)="prescreen();">Could I Qualify?</span>
+    </div>
+    <div class="card card-small">
+      <span class="md-button" type="button" (click)="login();">Create an account</span>
+    </div>
+    <div class="card card-small">
+      <span class="md-button" type="button" (click)="apply();">Apply for Benefits</span>
+    </div>
+  </div>
+
+  <!-- Next Steps -->
+  <h2>About WA Food, Cash and Medicaid Web Portal</h2>
+  <input type="hidden" #selection>
+  <div class="card-container">
+    <div class="card program-card foodImage"
+      (click)="showDiv.previous = !showDiv.previous;showDiv.current = false;showDiv.next = false" tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+      </svg>
+      <div class="card card-small-medical">
+        <span class="md-button" type="button">SNAP</span>
+      </div>
+    </div>
+    
+
+    <div class="card program-card cashImage"
+      (click)="showDiv.current = !showDiv.current;showDiv.previous = false;showDiv.next = false" tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+      </svg>
+      <div class="card card-small-medical">
+        <span class="md-button" type="button">CASH</span>
+      </div>
+    </div>
+
+    <div class="card program-card medicalImage" (click)="showDiv.next = !showDiv.next;showDiv.previous = false;showDiv.current = false"
+      tabindex="0">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+      </svg>
+      <div class="card card-small-medical">
+        <span class="md-button" type="button">MEDICAL</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngIf="showDiv.previous">
+      <div class="card-container-custom">
+        <h2>Food Assistance (SNAP)</h2>
+        <span>A federally funded program to help low-income families buy nutritious food from authorized retailers, also
+          known as "Food Stamps" or "Supplemental Nutritional Assistance Program".</span>
+      </div>
+    </div>
+    <div *ngIf="showDiv.next">
+      <div class="card-container-custom">
+        <h2>Medical Assistance (Medicaid)</h2>
+        <span>
+          The Medicaid Program is a federal program administered by the state. Its purpose is to help meet the cost of
+          medical services for individuals receiving public assistance payments, and individuals and families with low
+          income. The program objective is to provide medical and related services to assist individuals to attain or
+          retain an optimal level of health care.
+        </span><br>
+        <span>
+          There are several Medicaid-related programs for which DWSS determines eligibility. These programs include
+          coverage for low income individuals, families, children, specialized households, and the elderly and disabled.
+        </span><br>
+        <span>
+          You can also shop for a Qualified Health Plan through the health insurance marketplace and select the program
+          that best fits your needs and your income. You may qualify for financial assistance from the federal
+          government for your health plan purchase.
+        </span>
+      </div>
+    </div>
+    <div *ngIf="showDiv.current">
+      <div class="card-container-custom">
+        <h2>Cash Assistance (TANF)</h2>
+        <span>TANF is designed to provide Temporary Assistance for Needy Families to care for dependent children in
+          their own homes or in the homes of relative caregivers. TANF provides Financial and Support Services such as
+          CHILD CARE, TRANSPORTATION and Other Services.</span>
+      </div>
+    </div>
+  </div>
+  <div class="card-container-custom">
+    <h2>ANNOUNCEMENTS</h2> <br>
+  </div>
+  <div class="">
+    <div class="card card-announcements" tabindex="0">
+      <h3>***Important Message about SNAP Interviews***</h3><br>
+      <span>In response to the COVID-19 pandemic, SNAP agencies; have had an option to request a waiver from the Federal
+        agency that oversees the SNAP program, the Food and Nutrition Service (FNS), to temporarily eliminate SNAP
+        Interviews at initial certification, and recertification. This waiver has been in place in Washington since
+        March 2020, and will expire June 2022.</span>
+    </div>
+    <div class="card card-announcements" tabindex="0">
+      <h3>COVID-19 VACCINATIONS</h3><br>
+      <span>COVID-19 vaccinations are now available for anyone 16 years of age and older in most Wyoming counties. COVID-19 vaccines are safe and completely free. Find out how to schedule your COVID-19 vaccine by visiting: https://health.wyo.gov or by calling your local Public Health office.</span>
+    </div>
+  </div>
+  <div class="card-container"></div>
+  <div class="card-container"></div>
+  <div class="card-container"></div>
+  <div class="card-container"></div>
+</div>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+  
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+    <span>Need Assistance?&nbsp;</span>
+    <mat-icon> phone</mat-icon>
+    <span class='material-icons-outlined'>   &nbsp;  Call us @ +1(984)116-6699</span> 
+    <span class="example-spacer"></span>
+    
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+
+    
+    <button md-raised-button class="md-raised md-primary" (click)="onEdit()"><mat-icon> publish</mat-icon>Back To Top</button>
+
+  </mat-toolbar-row>
+</mat-toolbar>
