@@ -51,6 +51,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'WAIEEUI'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0E5D32AC8F4B438DBBF5E8A7FE2FB632 }}
-          package: .
+          package: ./dist/CheckMyBenefits
