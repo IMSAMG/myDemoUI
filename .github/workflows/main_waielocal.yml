@@ -51,6 +51,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'WAIELOCAL'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5E4FF2E4E5AA4570A7A7C811C0D33CF0 }}
-          package: .
+          package: ./dist/CheckMyBenefits
