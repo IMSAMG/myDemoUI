@@ -1,0 +1,72 @@
+mat-toolbar {
+    background: #004a9f;
+    color: white;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #002b5c;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+.mat-toolbar.mat-primary {
+    background: #85c77b;
+    color: rgb(25, 24, 24);
+}
+
+.buttonColor {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: #191a1b;
+    font-weight: bolder;
+    font-size: 1rem;
+}
+
+mat-sidenav {
+    margin: 16px;
+    width: 200px;
+    border-right: none;
+    background: #73a66e;
+    color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+}
+
+.waStateImage{
+    display: flex;
+    width:   370px;
+    height:  200px;
+    background-image: url("../../assets/images/Washington-state-outline.jpg");
+  }
+
+.mat-drawer-backdrop.mat-drawer-shown {
+    background-color: rgba(186, 202, 179, 0.6);
+}
+
+.content {
+    height: calc(100vh - 98px);
+    border-radius: 10px;
+    margin: 16px;
+    margin-left: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: lightgray;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}

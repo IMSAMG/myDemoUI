@@ -27,6 +27,10 @@ import { DemoComponent } from './demographic/demo.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { AddInfoComponent } from './additionalInformation/addInfo.component';
 import { EligResultsComponent } from './EligResults/eligResults.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { AfbComponent } from './applyforbenefits/afb.component';
+
 
 
 
@@ -41,6 +45,7 @@ import { EligResultsComponent } from './EligResults/eligResults.component';
     DemoComponent,
     AddInfoComponent,
     EligResultsComponent,
+    AfbComponent
   ],
   imports: [
     MatSliderModule,
@@ -62,7 +67,10 @@ import { EligResultsComponent } from './EligResults/eligResults.component';
     MatOptionModule,
     MatDividerModule,
     MatDialogModule,
-    MatRadioModule
+    MatRadioModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

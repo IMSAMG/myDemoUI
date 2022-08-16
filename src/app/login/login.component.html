@@ -52,7 +52,7 @@
             Please provide a valid password
           </mat-error>
         </mat-form-field>
-        <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid">Login</button>
+        <button mat-raised-button color="primary" [disabled]="password === ''" (click)="onSubmit();">Login</button>
       </form>
     </mat-card-content>
     <div class="card-body">
@@ -75,6 +75,8 @@
   <mat-toolbar color="primary">
     <mat-toolbar-row>
   
+      <div class="sealImage"></div>
+      
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>

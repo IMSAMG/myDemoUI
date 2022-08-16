@@ -39,8 +39,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   public onSubmit(): void {
-    this.loginValid = true;
-    this._router.navigate(['user']);
+    this._router.navigate(['apply']);
   }
 
   public forgotUsername(): void {

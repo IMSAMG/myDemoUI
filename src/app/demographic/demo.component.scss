@@ -6,6 +6,18 @@
 mat-card-subtitle {
   font-size: 18px;
 }
+
+.mat-toolbar.mat-primary {
+  background: #85c77b;
+  color: rgb(25, 24, 24);
+}
+
+.sealImage{
+  display: inline-block;
+  width:   88px;
+  height:  85px;
+  background-image: url("../../assets/images/WA_SEAL.jpg");
+}
   
 mat-card-title {
   color: green;

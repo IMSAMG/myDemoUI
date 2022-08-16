@@ -40,6 +40,11 @@
     font-size: 1rem;
   }
 
+  .mat-toolbar.mat-primary {
+    background: #85c77b;
+    color: rgb(25, 24, 24);
+  }
+
   .buttonColor {
       background-color: Transparent;
       background-repeat:no-repeat;
@@ -47,7 +52,7 @@
       cursor:pointer;
       overflow: hidden;
       outline:none;
-      color: #e6ebf1;
+      color: #191a1b;
       font-weight: bolder;
       font-size: 1rem;
   }
@@ -116,6 +121,17 @@
     align-items: center;
   }
 
+  .mat-toolbar-row, .mat-toolbar-single-row {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    height: 85px;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+  }
+
   svg.material-icons {
     height: 24px;
     width: auto;
@@ -123,6 +139,13 @@
 
   svg.material-icons:not(:last-child) {
     margin-right: 8px;
+  }
+
+  .sealImage{
+    display: inline-block;
+    width:   88px;
+    height:  85px;
+    background-image: url("../../assets/images/WA_SEAL.jpg");
   }
 
   .foodImage{

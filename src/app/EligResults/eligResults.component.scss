@@ -7,6 +7,18 @@
   color: green;
 }
 
+.mat-toolbar.mat-primary {
+  background: #85c77b;
+  color: rgb(25, 24, 24);
+}
+
+.sealImage{
+  display: inline-block;
+  width:   88px;
+  height:  85px;
+  background-image: url("../../assets/images/WA_SEAL.jpg");
+}
+
 .member_table, tr {
   max-width: 700px;
   border: 1px solid black;

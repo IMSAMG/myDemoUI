@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="sidebarmenu.toggle()">menu</mat-icon>
+      </button>
+      <button class="buttonColor" (click)="back();"><span>Washington State Department of Social and Health Services</span></button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav #sidebarmenu>
+        <div class="waStateImage"></div>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="'/home'"> <mat-icon>dashboard</mat-icon> OVERVIEW </a>
+        <a mat-list-item [routerLink]="'/food'"> <mat-icon> fastfood</mat-icon> FOOD </a>
+        <a mat-list-item [routerLink]="'/cash'"> <mat-icon> attach_money</mat-icon> CASH </a>
+        <a mat-list-item [routerLink]="'/medicaid'"> <mat-icon>medication</mat-icon> MEDICAID </a>
+        <a mat-list-item [routerLink]="'/housing'"> <mat-icon>home</mat-icon> HOUSING </a>
+        <a mat-list-item [routerLink]="'/contact'"> <mat-icon>mark_email_read</mat-icon> CONTACT US </a>
+        <a mat-list-item [routerLink]="'/account'"> <mat-icon>account_circle</mat-icon> ACCOUNT </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 92vh">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

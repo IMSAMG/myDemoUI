@@ -10,6 +10,17 @@ visibility: visible;
   opacity: 1;
 }
 
+.mat-toolbar.mat-primary {
+  background: #85c77b;
+  color: rgb(25, 24, 24);
+}
+
+.sealImage{
+  display: inline-block;
+  width:   88px;
+  height:  85px;
+  background-image: url("../../assets/images/WA_SEAL.jpg");
+}
 
 .popup {
   margin: 70px auto;
