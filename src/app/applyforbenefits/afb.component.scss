@@ -33,8 +33,10 @@ mat-sidenav {
 } */
 
 .mat-toolbar.mat-primary {
-    background: #85c77b;
-    color: rgb(25, 24, 24);
+  // background: #ae87f2;
+  background: #008457;
+  color: rgb(249, 246, 246);
+  font-size: 1rem;
 }
 
 .buttonColor {
@@ -50,10 +52,13 @@ mat-sidenav {
 }
 
 .waStateImage{
-    display: inline-flex;
-    width:   200px;
-    height:  180px;
-    background-image: url("../../assets/images/Washington-state-outline.jpg");
+    display: block;
+    width: 150px;
+    height: 150px;
+   /*  border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px; */
+    background-image: url("../../assets/images/WA_STATE_MAP.jpg");
   }
 
 .mat-drawer-backdrop.mat-drawer-shown {

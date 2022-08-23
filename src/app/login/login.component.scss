@@ -9,8 +9,21 @@ label {
   }
 
   .mat-toolbar.mat-primary {
-    background: #85c77b;
-    color: rgb(25, 24, 24);
+    // background: #ae87f2;
+    background: #008457;
+    color: rgb(249, 246, 246);
+    font-size: 1rem;
+  }
+
+  .mat-toolbar-row, .mat-toolbar-single-row {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    height: 85px;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
   }
 
   .buttonColor {

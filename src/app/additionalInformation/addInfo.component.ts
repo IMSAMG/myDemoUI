@@ -96,4 +96,8 @@ export class AddInfoComponent implements OnInit {
         console.log(' Value is : ', this.income );
     }
 
+    login(): void {
+        this.router.navigate(['login']);
+    }
+
 }

@@ -1,24 +1,30 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Washington State Department of Social and Health Services</span>
-  
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-      
-    <mat-icon> phone</mat-icon>
-    <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span> 
-    <mat-icon>g_translate</mat-icon>
-    <span>&nbsp;&nbsp;&nbsp;</span>
-    <section>
-      <div class="example-button-row">
-        <button mat-raised-button>LOGIN</button>
-      </div>
-    </section>
-  </mat-toolbar-row>
+<mat-toolbar color="primary" style="background-color: transparent;">
+  <div fxShow="true" fxHide.gt-sm="true">
+    <mat-toolbar-row>
+      <button class="buttonColor" (click)="back();">
+        <span style="font-size: 20px;color: aliceblue;">
+          Washington State Department of Social and Health Services
+        </span>
+      </button>
+
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+
+      <mat-icon> phone</mat-icon>
+      <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <mat-icon>g_translate</mat-icon>
+      <span>&nbsp;&nbsp;&nbsp;</span>
+      <section>
+        <div class="example-button-row">
+          <button mat-raised-button (click)="login();">LOGIN</button>
+        </div>
+      </section>
+    </mat-toolbar-row>
+  </div>
 </mat-toolbar>
 
-<div class="card-wrapper">
+<div fxLayout="row wrap" fxShow="true" fxHide.gt-sm="true" class="card-wrapper">
   <mat-card>
     <mat-card-header>
       <mat-card-title>Could I Qualify?  >    Member Summary</mat-card-title>
@@ -85,24 +91,36 @@
 </div>
   
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <div class="sealImage"></div>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span>Need Assistance?&nbsp;</span>
-    <mat-icon> phone</mat-icon>
-    <span class='material-icons-outlined'>   &nbsp;  Call us @ +1(984)116-6699</span> 
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <button md-raised-button class="md-raised md-primary" (click)="onEdit()"><mat-icon> publish</mat-icon>Back To Top</button>
-  </mat-toolbar-row>
+  <div fxShow="true" fxHide.gt-sm="true">
+    <mat-toolbar-row>
+      <div class="sealImage"></div>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+
+
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+
+      <span>Need Assistance?&nbsp;</span>
+      <mat-icon> phone</mat-icon>
+      <span class='material-icons-outlined'> &nbsp; Call us @ +1(984)116-6699</span>
+      <span class="example-spacer"></span>
+
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+
+
+      <button md-raised-button class="md-raised md-primary" (click)="onEdit()">
+        <mat-icon> publish</mat-icon>Back To Top
+      </button>
+
+    </mat-toolbar-row>
+  </div>
 </mat-toolbar>

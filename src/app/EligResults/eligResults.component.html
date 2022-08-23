@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" style="background-color: transparent;">
   <mat-toolbar-row>
     <span>Washington State Department of Social and Health Services</span>
   
@@ -18,7 +18,7 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div class="card-wrapper">
+<div fxShow="true" fxHide.gt-sm="true" class="card-wrapper">
   <mat-card>
     <mat-card-header>
       <mat-card-title>Could I Qualify?  &nbsp;&nbsp;  >  &nbsp;&nbsp;    Eligibility Results</mat-card-title>
@@ -105,34 +105,36 @@
 <div class="card-container"></div>
 
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
+  <div fxShow="true" fxHide.gt-sm="true">
+    <mat-toolbar-row>
+      <div class="sealImage"></div>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
 
-    <div class="sealImage"></div>
-    
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
 
-  
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
 
-    <span>Need Assistance?&nbsp;</span>
-    <mat-icon> phone</mat-icon>
-    <span class='material-icons-outlined'>   &nbsp;  Call us @ +1(984)116-6699</span> 
-    <span class="example-spacer"></span>
-    
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
+      <span>Need Assistance?&nbsp;</span>
+      <mat-icon> phone</mat-icon>
+      <span class='material-icons-outlined'> &nbsp; Call us @ +1(984)116-6699</span>
+      <span class="example-spacer"></span>
 
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
 
-    
-    <button md-raised-button class="md-raised md-primary" (click)="onEdit()"><mat-icon> publish</mat-icon>Back To Top</button>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
 
-  </mat-toolbar-row>
+
+      <button md-raised-button class="md-raised md-primary" (click)="onEdit()">
+        <mat-icon> publish</mat-icon>Back To Top
+      </button>
+
+    </mat-toolbar-row>
+  </div>
 </mat-toolbar>

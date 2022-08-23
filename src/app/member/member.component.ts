@@ -165,5 +165,9 @@ export class MemberComponent implements IMembers {
         });
     }
 
+    login(): void {
+        this.router.navigate(['login']);
+    }
+
 
 }

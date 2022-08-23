@@ -1,37 +1,44 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Washington State Department of Social and Health Services</span>
-  
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-      
-    <mat-icon> phone</mat-icon>
-    <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span> 
-    <mat-icon>g_translate</mat-icon>
-    <span>&nbsp;&nbsp;&nbsp;</span>
-    <section>
-      <div class="example-button-row">
-        <button mat-raised-button>LOGIN</button>
-      </div>
-    </section>
-  </mat-toolbar-row>
+<mat-toolbar color="primary" style="background-color: transparent;">
+  <div fxShow="true" fxHide.gt-sm="true">
+    <mat-toolbar-row>
+      <button class="buttonColor" (click)="back();">
+        <span style="font-size: 20px;color: aliceblue;">
+          Washington State Department of Social and Health Services
+        </span>
+      </button>
+
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+
+      <mat-icon> phone</mat-icon>
+      <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <mat-icon>g_translate</mat-icon>
+      <span>&nbsp;&nbsp;&nbsp;</span>
+      <section>
+        <div class="example-button-row">
+          <button mat-raised-button (click)="login();">LOGIN</button>
+        </div>
+      </section>
+    </mat-toolbar-row>
+  </div>
 </mat-toolbar>
 
-<!-- <div class="card-wrapper"> -->
+<div fxLayout="row wrap" fxShow="true" fxHide.gt-sm="true">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>Could I Qualify?     >    Start</mat-card-title>
+      <mat-card-title>Could I Qualify? > Start</mat-card-title>
     </mat-card-header>
     <div class="card-container"></div>
     <mat-divider></mat-divider>
     <div class="card-container"></div>
     <div class="card-container"></div>
     <mat-card-subtitle>
-      <p>         Answer a few questions       </p>
+      <p> Answer a few questions </p>
     </mat-card-subtitle>
     <mat-card-content>
-      <Span>We will ask you a few questions about the people in your household. If you don't know the exact answer, give us your best guess.</Span>
+      <Span>We will ask you a few questions about the people in your household. If you don't know the exact answer, give
+        us your best guess.</Span>
     </mat-card-content>
     <div class="card-container"></div>
     <div class="card-container"></div>
@@ -41,7 +48,8 @@
       </p>
     </mat-card-subtitle>
     <mat-card-content>
-      <Span>Based on your answers, we will show what benefits your household might qualify for. However, the only way to verify benefit eligibility is to start an application.</Span>
+      <Span>Based on your answers, we will show what benefits your household might qualify for. However, the only way to
+        verify benefit eligibility is to start an application.</Span>
     </mat-card-content>
     <div class="card-container"></div>
     <div class="card-container"></div>
@@ -56,53 +64,50 @@
     <div class="card-container"></div>
     <div class="card-container"></div>
     <mat-card-content>
-      <button mat-button class="text-align: left" (click) ="back()">EXIT PRE-SCREENER</button>
+      <button mat-button class="text-align: left" (click)="back()">EXIT PRE-SCREENER</button>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button mat-raised-button color="primary" (click)="back();">BACK</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <button mat-raised-button color="accent" (click)="start();">START</button>
-  </mat-card-content>
+    </mat-card-content>
   </mat-card>
-  
+  <div class="card-container"></div>
+  <div class="card-container"></div>
+  <div class="card-container"></div>
+  <div class="card-container"></div>
+</div>
 
-<!-- </div> -->
-  
-   
-    <div class="card-container"></div>
-    <div class="card-container"></div>
-    <div class="card-container"></div>
-    <div class="card-container"></div>
-
-  
-  <mat-toolbar color="primary">
+<mat-toolbar color="primary">
+  <div fxShow="true" fxHide.gt-sm="true">
     <mat-toolbar-row>
-  
       <div class="sealImage"></div>
-      
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>
-  
-    
+
+
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>
-  
+
       <span>Need Assistance?&nbsp;</span>
       <mat-icon> phone</mat-icon>
-      <span class='material-icons-outlined'>   &nbsp;  Call us @ +1(984)116-6699</span> 
+      <span class='material-icons-outlined'> &nbsp; Call us @ +1(984)116-6699</span>
       <span class="example-spacer"></span>
-      
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
-  
+
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>
-  
-      
-      <button md-raised-button class="md-raised md-primary" (click)="onEdit()"><mat-icon> publish</mat-icon>Back To Top</button>
-  
+
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+
+
+      <button md-raised-button class="md-raised md-primary" (click)="onEdit()">
+        <mat-icon> publish</mat-icon>Back To Top
+      </button>
+
     </mat-toolbar-row>
-  </mat-toolbar>
+  </div>
+</mat-toolbar>

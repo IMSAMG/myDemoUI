@@ -1,24 +1,31 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <button class="buttonColor" (click)="back();"><span>Washington State Department of Social and Health Services</span></button>
-  
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-    <span class="example-spacer"></span>
-      
-    <mat-icon> phone</mat-icon>
-    <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span> 
-    <mat-icon>g_translate</mat-icon>
-    <span>&nbsp;&nbsp;&nbsp;</span>
-    <section>
-      <div class="example-button-row">
-        <button mat-raised-button>LOGIN</button>
-      </div>
-    </section>
-  </mat-toolbar-row>
+<mat-toolbar color="primary" style="background-color: transparent;">
+  <div fxShow="true" fxHide.gt-sm="true">
+    <mat-toolbar-row>
+      <button class="buttonColor" (click)="back();">
+        <span style="font-size: 20px;color: aliceblue;">
+          Washington State Department of Social and Health Services
+        </span>
+      </button>
+
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+      <span class="example-spacer"></span>
+
+      <mat-icon> phone</mat-icon>
+      <span class='material-icons-outlined'>&nbsp; 1(984)116-6699 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <mat-icon>g_translate</mat-icon>
+      <span>&nbsp;&nbsp;&nbsp;</span>
+      <section>
+        <div class="example-button-row">
+          <button mat-raised-button >LOGIN</button>
+        </div>
+      </section>
+    </mat-toolbar-row>
+  </div>
 </mat-toolbar>
 
-  <mat-toolbar color="Login">
+  <mat-toolbar color="Login" style="background-color: transparent;">
+    <div fxShow="true" fxHide.gt-sm="true">
     <mat-toolbar-row>
     
       <span class="example-spacer"></span>
@@ -31,8 +38,10 @@
       <span class="example-spacer"></span>
       <span class="example-spacer"></span>
     </mat-toolbar-row>
+    </div>
   </mat-toolbar>
 
+  <div fxLayout="row wrap" fxShow="true" fxHide.gt-sm="true">
   <mat-card>
     <mat-card-content>
       <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
@@ -71,36 +80,39 @@
      
     </div>
   </mat-card>
-  
+</div>
+
   <mat-toolbar color="primary">
-    <mat-toolbar-row>
+    <div fxShow="true" fxHide.gt-sm="true">
+      <mat-toolbar-row>
+        <div class="sealImage"></div>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
   
-      <div class="sealImage"></div>
-      
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
   
-    
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
   
-      <span>Need Assistance?&nbsp;</span>
-      <mat-icon> phone</mat-icon>
-      <span class='material-icons-outlined'>   &nbsp;  Call us @ +1(984)116-6699</span> 
-      <span class="example-spacer"></span>
-      
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
+        <span>Need Assistance?&nbsp;</span>
+        <mat-icon> phone</mat-icon>
+        <span class='material-icons-outlined'> &nbsp; Call us @ +1(984)116-6699</span>
+        <span class="example-spacer"></span>
   
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
-      <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
   
-      
-      <button md-raised-button class="md-raised md-primary" (click)="onEdit()"><mat-icon> publish</mat-icon>Back To Top</button>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
+        <span class="example-spacer"></span>
   
-    </mat-toolbar-row>
+  
+        <button md-raised-button class="md-raised md-primary" (click)="onEdit()">
+          <mat-icon> publish</mat-icon>Back To Top
+        </button>
+  
+      </mat-toolbar-row>
+    </div>
   </mat-toolbar>

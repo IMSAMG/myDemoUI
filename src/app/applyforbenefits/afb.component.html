@@ -1,9 +1,11 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" style="background-color: transparent;">
   <mat-toolbar-row>
     <button mat-icon-button>
       <mat-icon (click)="isExpanded = !isExpanded">menu</mat-icon>
     </button>
-    <button class="buttonColor" (click)="back();"><span>Washington State Department of Social and Health Services</span></button>
+    <button class="buttonColor" (click)="back();">
+      <span style="font-size: 20px;color: aliceblue;">Washington State Department of Social and Health Services</span>
+    </button>
 
     <span class="example-spacer"></span>
     <span class="example-spacer"></span>
@@ -12,93 +14,8 @@
     <button mat-raised-button><mat-icon>add_alert</mat-icon></button>
   </mat-toolbar-row>
 </mat-toolbar>
-  
-<!-- <mat-sidenav-container class="example-container" autosize>
-  <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
-    <div class="waStateImage"></div>
-    <mat-nav-list>
-      <mat-list-item [routerLink]="'/apply'" [routerLinkActive]="['active']"> 
-        <mat-icon matListIcon>dashboard</mat-icon> 
-        <a matLine>OVERVIEW </a>
-      </mat-list-item>
-      <mat-list-item [routerLink]="'/food'" [routerLinkActive]="['active']"> 
-        <mat-icon matListIcon> fastfood</mat-icon> 
-        <a matline>FOOD </a>
-      </mat-list-item>
-      <mat-list-item [routerLink]="'/cash'" [routerLinkActive]="['active']"> 
-        <mat-icon matListIcon> attach_money</mat-icon> 
-        <a matline>CASH </a>
-      </mat-list-item>
-      <mat-list-item [routerLink]="'/medicaid'" [routerLinkActive]="['active']"> 
-        <mat-icon matListIcon>medication</mat-icon> 
-        <a matline>MEDICAID </a>
-      </mat-list-item>
-      <mat-list-item [routerLink]="'/housing'" [routerLinkActive]="['active']"> 
-        <mat-icon matListIcon>home</mat-icon> 
-        <a matline>HOUSING </a>
-      </mat-list-item>
-      <mat-list-item [routerLink]="'/contact'" [routerLinkActive]="['active']"> 
-        <mat-icon matListIcon>mark_email_read</mat-icon> 
-        <a matline>CONTACT US </a>
-      </mat-list-item>
-      <mat-list-item [routerLink]="'/account'" [routerLinkActive]="['active']"> 
-        <mat-icon matListIcon>account_circle</mat-icon> 
-        <a matline>ACCOUNT </a></mat-list-item>
-      <mat-list-item [routerLink]="''" [routerLinkActive]="['active']"> 
-        <mat-icon matListIcon class="material-icons md-dark md-24">exit_to_app</mat-icon> 
-        <a matline>LOG OUT </a>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
 
-  <mat-sidenav-content>
-    <div class="card-container-custom">
-      <h1>Hello, #Applicant!</h1>
-      <div class="card-container-custom">
-        <span>The application for Food has been sent to our office. The entire process takes about 4-7
-          weeks depending on the volume of applications, additional questions and the complication of
-          the application. Here is a rough outline of the approval process.
-        </span>
-      </div>
-    </div>
-     
-    <h2 style="color: white;">All Applications:</h2>
-    <h2 style="color: white;"> <mat-icon style="color: white;">assignment</mat-icon> Warning</h2>
-    <div class="card-container-custom">
-      <div class="card-container-custom">
-        <h1><mat-icon>warning</mat-icon> Food: PENDING INTERVIEW </h1>
-      </div>
-      <div class="card-container-custom">
-        <span>This is a succinct, helpful message about an action needed to move forward in the application.
-        </span>
-      </div>
-    </div>
-    
-    <h2 style="color: white;"> <mat-icon style="color: white;">assignment</mat-icon> Error</h2>
-    <div class="card-container-custom">
-      <div class="card-container-custom">
-        <h1><mat-icon>error</mat-icon> Medicaid: DENIED </h1>
-      </div>
-      <div class="card-container-custom">
-        <span>This is a succinct, helpful message explaining why this application was denied and what can be 
-          done about it. Give contact information and may be a libk to more information.
-        </span>
-      </div>
-    </div>
-    <h2 style="color: white;"> <mat-icon style="color: white;">assignment</mat-icon> Active</h2>
-    <div class="card-container-custom">
-      <div class="card-container-custom">
-        <h1><mat-icon>check_circle</mat-icon> Food: ACTIVE </h1>
-      </div>
-      <div class="card-container-custom">
-        <span>This is a succinct, helpful message about how much $ you have and when you to reapply.
-        </span>
-      </div>
-    </div>
-  </mat-sidenav-content>
-
-</mat-sidenav-container> -->
-
+<div fxShow="true" fxHide.gt-sm="true" class="content" role="main">
 <mat-sidenav-container class="mat-elevation-z8" autosize>
   <mat-sidenav #sidenav mode="side" opened="true" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()">
     <!-- <div class="waStateImage"></div> -->
@@ -135,6 +52,7 @@
         <a matline>LOG OUT </a>
       </mat-list-item>
     </mat-nav-list>
+    <!-- <div class="waStateImage"></div> -->
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="content mat-elevation-z8">
@@ -169,7 +87,7 @@
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
+</div>
 <mat-toolbar color="primary">
   <mat-toolbar-row>
 

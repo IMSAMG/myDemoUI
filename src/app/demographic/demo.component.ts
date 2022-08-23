@@ -70,5 +70,7 @@ export class DemoComponent {
     onRadioChange(): void{
     }
 
-
+    login(): void {
+      this.router.navigate(['login']);
+    }
 }
